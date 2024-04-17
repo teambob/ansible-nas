@@ -36,5 +36,5 @@ samba_shares:
     writable: yes
     valid-users: +samba_users
     browseable: yes
-    path: "{{ samba_shares_root }}/public"
+    path: "{{ samba_shares_root }}/backup"
 
