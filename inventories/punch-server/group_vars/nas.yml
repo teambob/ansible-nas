@@ -21,9 +21,16 @@ homepage_enabled: true
 nextcloud_enabled: true
 
 samba_shares:
-samba_shares:
   - name: public
     comment: "General use, authenticated"
+    guest_ok: no
+    public: no
+    writable: yes
+    valid-users: +samba_users
+    browseable: yes
+    path: "{{ samba_shares_root }}/public"
+  - name: backup
+    comment: "Backups, authenticated"
     guest_ok: no
     public: no
     writable: yes
