@@ -17,7 +17,7 @@ nfs_shares_root: /srv/nfs/
 samba_shares_root: /srv/samba/
 
 ## Enable some applications
-homepage_enabled: true
+homepage_enabled: false
 nextcloud_enabled: true
 
 samba_shares:
