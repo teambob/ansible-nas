@@ -39,6 +39,16 @@ samba_shares:
     write_list: +samba_users
     browseable: yes
     path: "{{ samba_shares_root }}/backup"
+  - name: media
+    comment: "Media"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+    path: "{{ samba_shares_root }}/media"
+
 
 docker_home: /srv/docker/home
 docker_image_directory: /srv/docker/images
