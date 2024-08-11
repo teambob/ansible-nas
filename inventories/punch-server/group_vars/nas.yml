@@ -30,6 +30,7 @@ samba_shares:
     write_list: +samba_users
     browseable: yes
     path: "{{ samba_shares_root }}/public"
+    
   - name: backup
     comment: "Backups, authenticated"
     guest_ok: no
@@ -39,6 +40,7 @@ samba_shares:
     write_list: +samba_users
     browseable: yes
     path: "{{ samba_shares_root }}/backup"
+    
   - name: media
     comment: "Media"
     guest_ok: no
@@ -48,7 +50,147 @@ samba_shares:
     write_list: +samba_users
     browseable: yes
     path: "{{ samba_shares_root }}/media"
+    
+  - name: downloads
+    comment: "Stuff downloaded"
+    path: "{{ downloads_root }}"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes    
 
+  - name: movies
+    comment: "Movies"
+    path: "{{ movies_root }}"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+      
+
+  - name: tv
+    comment: "TV Episodes"
+    path: "{{ tv_root }}"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+    
+
+  - name: music
+    comment: "Music"
+    path: "{{ music_root }}"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+    
+
+  - name: podcasts
+    comment: "Podcasts"
+    path: "{{ podcasts_root }}"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+    
+
+  - name: dump
+    comment: "File dump"
+    path: "{{ samba_shares_root }}/dump"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+    
+
+  - name: games
+    comment: "Games"
+    path: "{{ samba_shares_root }}/games"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+    
+
+  - name: photos
+    comment: "Pictures"
+    path: "{{ photos_root }}"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+    
+
+  - name: books
+    comment: "Books"
+    path: "{{ books_root }}"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+    
+
+  - name: audiobooks
+    comment: "Audiobooks"
+    path: "{{ audiobooks_root }}"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+    
+
+  - name: comics
+    comment: "Comics"
+    path: "{{ comics_root }}"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+    
+
+  - name: documents
+    comment: "Documents"
+    path: "{{ documents_root }}"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
+    
+
+  - name: code
+    comment: "Code"
+    path: "{{ code_root }}"
+    guest_ok: no
+    public: no
+    writable: no
+    group: samba_users
+    write_list: +samba_users
+    browseable: yes
 
 docker_home: /srv/docker/home
 docker_image_directory: /srv/docker/images
