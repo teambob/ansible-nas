@@ -19,8 +19,10 @@ samba_shares_root: /srv/samba/
 ## Enable some applications
 homepage_enabled: false
 nextcloud_enabled: true
-jellyfin_enabled: true
-jellyfin_available_externally: true
+#jellyfin_enabled: true
+#jellyfin_available_externally: true
+minidlna_enabled: true
+minidlna_available_externally: true
 
 samba_shares:
   - name: public
